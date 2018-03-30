@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>Tableau de bord</h1>
+    <div id="js-kpiContext" class="">
+        <div class="l-gridCol" data-bind="foreach: Kpis">
+            <div class="Kpi l-gridCol-col1">
+                <div>
+                    <!-- <span class="Kpi-value" data-bind="animateValue: Value"></span> -->
+                    <span class="Kpi-value" data-bind="text: Value"></span>
+                    <!-- ko if: $data.Unit -->
+                    <span class="Kpi-unit" data-bind="text: Unit"></span>
+                    <!-- /ko -->
+                </div>
+                <div class="Kpi-title" data-bind="html: Title"></div>
+            </div>
+        </div>
+    </div>
+    <div id="js-filterContext" class="l-panel Filter-container">
+        <analytics-filter params="model: model"></analytics-filter>
+    </div>
+    <div class="l-gridCol">
+        <div class="l-gridCol-col12">
+            <div id="js-chartContext" class="l-gridCol l-GraphicCard">
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-1" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-2" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-3" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart3"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-4" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-5" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart5"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-gridCol-col4">
+                    <div id="js-graphicCard-6" class="GraphicCard">
+                        <div class="GraphicCard-body">
+                            <span class="GraphicCard-iconExpand syficon icon-circle"></span>
+                            <div class="GraphicCard-title" data-bind="text: $data"></div>
+                            <div class="chart-containerParent">
+                                <div class="chart-container">
+                                    <canvas id="myChart6"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <!--<script src="../knockout.debug.js"></script>-->
+    <script src="knockout-latest.js"></script>
+    <script src="knockout.mapping.js"></script>
+    <script src="Chart.min.js"></script>
+    <script src="chartjs-plugin-datalabels.min.js"></script>
+    <script src="loglevel.min.js"></script>
+</body>
+
+</html>

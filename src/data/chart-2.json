@@ -1,0 +1,60 @@
+{
+  "Location": 2,
+  "Type": "Bar",
+  "Title": "Nb d'heures",
+  "Data": [
+    {
+      "Id": 5,
+      "Label":
+        "Séminaire intégration expérimentés - (expérience hors CGI \u003e 3-4 ans)",
+      "Data": 260
+    },
+    {
+      "Id": 3,
+      "Label": "Acteur sur son périmètre (cycle vert)",
+      "Data": 235
+    },
+    {
+      "Id": 1,
+      "Label":
+        "Oser une relation vraie (Module 1 du programme \"Enrichir la relation Managériale\")",
+      "Data": 217
+    },
+    {
+      "Id": 9,
+      "Label":
+        "Oser un vrai feedback (Module 2 du programme Enrichir la relation managériale)",
+      "Data": 202
+    },
+    {
+      "Id": 6,
+      "Label": "Attitude Managériale (Cycle Orange Niveau 2)",
+      "Data": 195
+    },
+    {
+      "Id": 8,
+      "Label": "Acteur dans la complexité (cycle bleu)",
+      "Data": 181
+    },
+    {
+      "Id": 4,
+      "Label": "Compétences relationnelles (Cycle Orange Niveau 1)",
+      "Data": 169
+    },
+    {
+      "Id": 7,
+      "Label": "Ecole du Conseil CBC",
+      "Data": 156
+    },
+    {
+      "Id": 10,
+      "Label": "Impact de vote communication",
+      "Data": 134
+    },
+    {
+      "Id": 2,
+      "Label": "Séminaire intégration débutants",
+      "Data": 97
+    }
+  ]
+}

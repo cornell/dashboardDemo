@@ -1,0 +1,61 @@
+{
+  "Location": 3,
+  "Type": "Stack",
+  "Title": "Formations les plus suivies",
+  "Legend": ["succès", "échec", "indeterminé"],
+  "Data": [
+    {
+      "Id": 1,
+      "Label":
+        "Oser une relation vraie (Module 1 du programme \"Enrichir la relation Managériale\")",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 2,
+      "Label": "Séminaire intégration débutants",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 3,
+      "Label": "Acteur sur son périmètre (cycle vert)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 4,
+      "Label": "Compétences relationnelles (Cycle Orange Niveau 1)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 5,
+      "Label":
+        "Séminaire intégration expérimentés - (expérience hors CGI \u003e 3-4 ans)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 6,
+      "Label": "Attitude Managériale (Cycle Orange Niveau 2)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 7,
+      "Label": "Ecole du Conseil CBC",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 8,
+      "Label": "Acteur dans la complexité (cycle bleu)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 9,
+      "Label":
+        "Oser un vrai feedback (Module 2 du programme Enrichir la relation managériale)",
+      "Data": [61, 54, 23]
+    },
+    {
+      "Id": 10,
+      "Label": "Impact de vote communication",
+      "Data": [61, 54, 23]
+    }
+  ]
+}

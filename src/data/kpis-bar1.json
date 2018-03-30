@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "Title": "inscrits",
+    "Value": "755",
+    "Unit": null
+  },
+  {
+    "Id": 2,
+    "Title": "formations",
+    "Value": "217",
+    "Unit": "H"
+  },
+  {
+    "Id": 3,
+    "Title": "succès",
+    "Value": "13",
+    "Unit": "%"
+  },
+  {
+    "Id": 4,
+    "Title": "progression",
+    "Value": "46",
+    "Unit": "%"
+  },
+  {
+    "Id": 5,
+    "Title": "formations terminées",
+    "Value": "29",
+    "Unit": "%"
+  },
+  {
+    "Id": 6,
+    "Title": "formations par apprenant",
+    "Value": "30.3",
+    "Unit": null
+  },
+  {
+    "Id": 7,
+    "Title": "formations par apprenant",
+    "Value": "0",
+    "Unit": "H"
+  }
+]

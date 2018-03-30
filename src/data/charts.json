@@ -1,0 +1,49 @@
+{
+    "Charts": [
+        {
+            "Title": "Formations les plus suivies",
+            "Data": [
+                {
+                    "Id": 1,
+                    "Label": "Oser une relation vraie (Module 1 du programme \"Enrichir la relation Managériale\")",
+                    "Value": 755
+                },
+                {
+                    "Id": 2,
+                    "Label": "Séminaire intégration débutants",
+                    "Value": 594
+                },
+                {
+                    "Id": 3,
+                    "Label": "Acteur sur son périmètre (cycle vert)",
+                    "Value": 555
+                },
+                {
+                    "Id": 4,
+                    "Label": "Compétences relationnelles (Cycle Orange Niveau 1)",
+                    "Value": 543
+                },
+                {
+                    "Id": 5,
+                    "Label": "Séminaire intégration expérimentés - (expérience hors CGI \u003e 3-4 ans)",
+                    "Value": 403
+                },
+                {
+                    "Id": 6,
+                    "Label": "Attitude Managériale (Cycle Orange Niveau 2)",
+                    "Value": 376
+                },
+                {
+                    "Id": 7,
+                    "Label": "Ecole du Conseil CBC",
+                    "Value": 329
+                },
+                {
+                    "Id": 8,
+                    "Label": "Acteur dans la complexité (cycle bleu)",
+                    "Value": 311
+                }
+            ]
+        }
+    ]
+}
