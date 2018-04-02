@@ -1,6 +1,4 @@
-import service from '../dashboardService';
-import Filter from '../Filters/filter';
-import chartBuilder from './chartBuilder';
+// import chartBuilder from './chartBuilder';
 
 /**
  * Represents a bar chart.
@@ -8,7 +6,7 @@ import chartBuilder from './chartBuilder';
  * @param {data} data - The data to bind.
  * @param {string} elementId - The id from the element.
  */
-export default function(data, title, elementId) {
+syfadis.analytics.charts.graphicCard = function(data, title, elementId) {
   var title = title;
   var labels = [];
   var values = [];
@@ -21,11 +19,11 @@ export default function(data, title, elementId) {
   var chartData = {
     data: data.Data,
     labels: labels,
-    values: values,
+    values: values
   };
 
   var el = document.getElementById(elementId);
-  var chart = chartBuilder.build(el, data.Type, chartData);
+  var chart = syfadis.analytics.charts.chartBuilder.build(el, data.Type, chartData);
   chartData.el = el;
 
   return {
@@ -33,6 +31,6 @@ export default function(data, title, elementId) {
     data: data.Data,
     title: title,
     chart: chart,
-    chartData: chartData,
+    chartData: chartData
   };
-}
+};

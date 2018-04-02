@@ -1,4 +1,4 @@
-export default function FilterList() {
+syfadis.analytics.charts.filters.FilterList = function() {
   // debugger;
   var self = this;
   self.nom = ko.observable();
@@ -38,4 +38,4 @@ export default function FilterList() {
     }
     return result;
   };
-}
+};

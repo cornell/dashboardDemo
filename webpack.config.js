@@ -9,6 +9,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const paths = {
   src: path.join(__dirname, "src"),
+  models: path.join(__dirname, "src/analytics/**"),
   data: path.join(__dirname, "src/data"),
   icons: path.join(__dirname, "src/common/fonts/syficon"),
   vendor: path.join(__dirname, "src/common/vendor"),
@@ -68,6 +69,11 @@ module.exports = {
       {
         from: paths.vendor,
         to: paths.dist
+      },
+      {
+        from: paths.models,
+        to: paths.dist + "/models",
+        flatten: true
       }
     ]),
     new ExtractTextPlugin("style.css"),

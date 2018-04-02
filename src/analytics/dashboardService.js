@@ -1,11 +1,11 @@
-import { KpiList } from './kpis/kpiList';
-import graphicCard from './charts/graphicCard';
+// import { KpiList } from './kpis/kpiList';
+// import graphicCard from './charts/graphicCard';
 import request from './dashboardRequest';
 
 export default {
   getKpis: function() {
     return request.getKpis(function(data) {
-      var koKpis = new KpiList({ Kpis: data });
+      var koKpis = new syfadis.analytics.charts.kpis.KpiList({ Kpis: data });
       ko.applyBindings(koKpis, document.getElementById('js-kpiContext'));
       window.syfadis.analytics.koKpis = koKpis;
     });
@@ -32,5 +32,5 @@ export default {
   },
   getChart4: function() {
     return request.getChart4();
-  },
+  }
 };

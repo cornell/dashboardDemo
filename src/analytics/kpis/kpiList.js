@@ -1,6 +1,4 @@
-import { Kpi } from './kpi';
-
-var KpiList = function(data) {
+syfadis.analytics.charts.kpis.KpiList = function(data) {
   var mapping = {
     // 'nom': {
     //     create: function (options) {
@@ -12,11 +10,9 @@ var KpiList = function(data) {
         return ko.utils.unwrapObservable(data.Id);
       },
       create: function(options) {
-        return new Kpi(options.data);
-      },
-    },
+        return new syfadis.analytics.charts.kpis.Kpi(options.data);
+      }
+    }
   };
   ko.mapping.fromJS(data, mapping, this);
 };
-
-export { KpiList };

@@ -1,17 +1,17 @@
-export default function(ctx, chartData) {
-  var $success = '#1FB15E';
-  var $failed = '#F47B2A';
-  var $undefined = '#36B9CB';
+syfadis.analytics.charts.components.stackChart = function(ctx, chartData) {
+  var $success = "#1FB15E";
+  var $failed = "#F47B2A";
+  var $undefined = "#36B9CB";
 
   var colors = [];
   var barColors = [];
-  var activeBarColor = 'rgba(54,185,203, 1)';
-  var inactiveBarColor = 'rgba(54,185,203, .5)';
+  var activeBarColor = "rgba(54,185,203, 1)";
+  var inactiveBarColor = "rgba(54,185,203, .5)";
 
   var values = {
     succeeded: [],
     failed: [],
-    unknown: [],
+    unknown: []
   };
   //   debugger;
   chartData.values.forEach(function(data) {
@@ -22,7 +22,7 @@ export default function(ctx, chartData) {
 
   (function initBarColors() {
     for (var i = 0; i < chartData.values.length; i++) {
-      colors.push('rgba(60,134,182, 1)');
+      colors.push("rgba(60,134,182, 1)");
     }
   })();
 
@@ -56,7 +56,7 @@ export default function(ctx, chartData) {
   }
 
   function reset() {
-    log.info(chartData.el.id + ' reseted');
+    log.info(chartData.el.id + " reseted");
     activateAllBars();
     chart.update();
   }
@@ -64,7 +64,7 @@ export default function(ctx, chartData) {
   function truncateLabels(labels) {
     var result = [labels.length];
     for (var i = 0; i < labels.length; i++) {
-      result[i] = labels[i].substring(0, 35) + ' ...';
+      result[i] = labels[i].substring(0, 35) + " ...";
     }
     return result;
   }
@@ -78,46 +78,46 @@ export default function(ctx, chartData) {
         break;
       }
     }
-    if (typeof index !== 'undefined') {
-      log.info(chartData.el.id + ' select bar [' + index + ']');
+    if (typeof index !== "undefined") {
+      log.info(chartData.el.id + " select bar [" + index + "]");
       activateBar(index);
       update();
     }
   }
 
   var chart = new Chart(ctx, {
-    type: 'horizontalBar',
+    type: "horizontalBar",
     data: {
       labels: chartData.labels,
       datasets: [
         {
-          type: 'horizontalBar',
-          label: 'échec',
+          type: "horizontalBar",
+          label: "échec",
           backgroundColor: $failed,
-          data: values.failed,
+          data: values.failed
         },
         {
-          type: 'horizontalBar',
-          label: 'indéterminé',
+          type: "horizontalBar",
+          label: "indéterminé",
           backgroundColor: $undefined,
-          data: values.unknown,
+          data: values.unknown
         },
         {
-          type: 'horizontalBar',
-          label: 'succès',
+          type: "horizontalBar",
+          label: "succès",
           backgroundColor: $success,
-          data: values.succeeded,
-        },
-      ],
+          data: values.succeeded
+        }
+      ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       hover: {
         // Overrides the global setting
-        mode: 'index',
+        mode: "index"
       },
-      events: ['click'],
+      events: ["click"],
       legend: { display: true },
       tooltips: { enabled: false },
       scales: {
@@ -126,30 +126,30 @@ export default function(ctx, chartData) {
             stacked: true,
             display: false,
             gridLines: { display: true },
-            ticks: { beginAtZero: true },
-          },
+            ticks: { beginAtZero: true }
+          }
         ],
         yAxes: [
           {
             stacked: true,
             display: true,
-            gridLines: { display: false },
-          },
-        ],
+            gridLines: { display: false }
+          }
+        ]
       },
       plugins: {
         datalabels: {
-          color: 'white',
+          color: "white",
           display: function(context) {
-            return context.dataset.data[context.dataIndex] + '%';
+            return context.dataset.data[context.dataIndex] + "%";
           },
           font: {
             // weight: 'bold'
           },
-          formatter: Math.round,
-        },
-      },
-    },
+          formatter: Math.round
+        }
+      }
+    }
   });
 
   return {
@@ -159,6 +159,6 @@ export default function(ctx, chartData) {
     activateAllBars: activateAllBars,
     reset: reset,
     getElement: getElement,
-    selectBar: selectBar,
+    selectBar: selectBar
   };
-}
+};

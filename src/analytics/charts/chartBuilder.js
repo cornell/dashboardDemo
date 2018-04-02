@@ -1,9 +1,9 @@
-import createBarChart from './components/barChart';
-import createStackChart from './components/stackChart';
+// import createBarChart from "./components/barChart";
+// import createStackChart from "./components/stackChart";
 
-export default {
-  Bar: createBarChart,
-  Stack: createStackChart,
+syfadis.analytics.charts.chartBuilder = {
+  Bar: syfadis.analytics.charts.components.barChart,
+  Stack: syfadis.analytics.charts.components.stackChart,
 
   build: function(el, chartType, data) {
     var chart = this[chartType];
@@ -13,5 +13,5 @@ export default {
     } else {
       log.error('the chart ' + chartType + ' is not implemented !');
     }
-  },
+  }
 };
