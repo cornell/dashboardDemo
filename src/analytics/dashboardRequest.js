@@ -1,24 +1,24 @@
 // import $ from 'jquery';
 
-var startUrl = '/Analytics/TrainingDashboard/';
+syfadis.analytics.dashboardRequest = {
+  startUrl: '/Analytics/TrainingDashboard/',
 
-export default {
   getKpis: function(successCallback) {
-    return $.getJSON(startUrl + 'GetAllKpis', successCallback);
+    return $.getJSON(this.startUrl + 'GetAllKpis', successCallback);
   },
   updateKpis: function(trainingId, successCallback) {
-    $.getJSON(startUrl + 'GetAllKpis/id', { id: trainingId }, successCallback);
+    $.getJSON(this.startUrl + 'GetAllKpis/id', { id: trainingId }, successCallback);
   },
   getChart1: function() {
-    return $.getJSON(startUrl + 'GetChart/PopularTrainings');
+    return $.getJSON(this.startUrl + 'GetChart/PopularTrainings');
   },
   getChart2: function() {
-    return $.getJSON(startUrl + 'GetChart/TimeSpentByTrainings');
+    return $.getJSON(this.startUrl + 'GetChart/TimeSpentByTrainings');
   },
   getChart3: function() {
-    return $.getJSON(startUrl + 'GetChart/SuccessByTrainings');
+    return $.getJSON(this.startUrl + 'GetChart/SuccessByTrainings');
   },
   getChart4: function() {
-    return $.getJSON(startUrl + 'GetChart/ProgressByTrainings');
-  },
+    return $.getJSON(this.startUrl + 'GetChart/ProgressByTrainings');
+  }
 };

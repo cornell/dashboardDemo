@@ -1,36 +1,39 @@
 // import { KpiList } from './kpis/kpiList';
 // import graphicCard from './charts/graphicCard';
-import request from './dashboardRequest';
+// import request from './dashboardRequest';
 
-export default {
+syfadis.analytics.dashboardService = {
+  request: syfadis.analytics.dashboardRequest,
   getKpis: function() {
-    return request.getKpis(function(data) {
+    return this.request.getKpis(function(data) {
       var koKpis = new syfadis.analytics.charts.kpis.KpiList({ Kpis: data });
       ko.applyBindings(koKpis, document.getElementById('js-kpiContext'));
       window.syfadis.analytics.koKpis = koKpis;
+      log.info('dashboardService.getKpis');
     });
   },
   updateKpis: function(trainingId) {
+    log.info('dashboardService.updateKpis');
     if (arguments.length === 0) {
-      request.getKpis(function(data) {
+      this.request.getKpis(function(data) {
         ko.mapping.fromJS({ Kpis: data }, window.syfadis.analytics.koKpis);
       });
     } else {
-      request.updateKpis(trainingId, function(data) {
+      this.request.updateKpis(trainingId, function(data) {
         ko.mapping.fromJS({ Kpis: data }, window.syfadis.analytics.koKpis);
       });
     }
   },
   getChart1: function() {
-    return request.getChart1();
+    return this.request.getChart1();
   },
   getChart2: function() {
-    return request.getChart2();
+    return this.request.getChart2();
   },
   getChart3: function() {
-    return request.getChart3();
+    return this.request.getChart3();
   },
   getChart4: function() {
-    return request.getChart4();
+    return this.request.getChart4();
   }
 };
